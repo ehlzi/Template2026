@@ -1,0 +1,35 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  flex: 1;
+  padding: var(--space-6) 0;
+}
+
+.main-content p {
+  margin: 0;
+}
+
+.content-section {
+  width: 100%;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-6);
+}
+
+.feature-card {
+  min-height: var(--space-11);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6);
+  border: 2px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  font-weight: 600;
+}

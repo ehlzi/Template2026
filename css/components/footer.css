@@ -1,0 +1,20 @@
+.site-footer {
+  background: var(--color-muted);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer__grid {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .site-footer__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

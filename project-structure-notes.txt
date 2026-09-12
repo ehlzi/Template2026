@@ -1,0 +1,160 @@
+Project CSS Structure
+
+This project uses a simple component based CSS structure to keep styling organized and reusable.
+
+Rule of thumb:
+- Base styles = global/shared
+- Layout styles = page structure
+- Component styles = specific UI sections
+
+Files:
+
+- css/base.css
+  "The foundation file for global styles, resets, and shared variables."
+  Purpose:
+  - Global resets and browser default cleanup
+  - CSS variables for colors, spacing, and sizing
+  - General body and typography styles
+  - Shared accessibility helper classes
+
+- css/layout.css
+  "The page structure file for layout and positioning. How the page is arranged and how components are positioned."
+  Purpose:
+  - Page-level layout utilities
+  - .container for max-width content wrappers
+  - .page-shell for full-page flex layout
+  - main flex behavior so the footer sits at the bottom
+
+- css/components/header.css
+  "The header component file for styling the page header."
+  Purpose:
+  - Header-specific styling
+  - Brand styling
+  - Skip link styling
+  - Mobile-first header layout and desktop responsive adjustments
+
+- css/components/nav.css
+  "The navigation component file for styling the page navigation."
+  Purpose:
+  - Navigation list styling
+  - Link states and spacing
+  - Mobile stacked navigation and desktop row layout
+
+- css/components/main.css
+  "The main content component file for styling the primary content area."
+  Purpose:
+  - Main content section styles
+  - Generic spacing and content layout for the main content region
+
+- css/components/footer.css
+  "The footer component file for styling the page footer."
+  Purpose:
+  - Footer styling
+  - Footer grid layout
+  - Responsive footer arrangement for larger screens
+
+Class Reference
+
+This is the core mental model behind the project structure. When in doubt, ask yourself:
+- Is this a global rule? Put it in base.css.
+- Is this about page structure? Put it in layout.css.
+- Is this specific to a section or component? Put it in that component file.
+
+- .container
+  Purpose:
+  - Restricts content to a max width so it doesn't stretch across the full screen.
+  - Keeps layout content readable and consistent.
+  - Used for page sections and main content wrappers.
+  Notes:
+  - This is a layout utility, not a card or component.
+  - It should not be applied to every box in a grid.
+
+- .page-shell
+  Purpose:
+  - Acts as the main document wrapper.
+  - Creates a vertical flex layout so the header, main content, and footer stack correctly.
+  Notes:
+  - This is what helps push the footer to the bottom when the page content is short.
+
+- .site-header
+  Purpose:
+  - Styles the header section.
+  - Sets the border and background color for the top bar.
+
+- .site-header__inner
+  Purpose:
+  - Controls the horizontal or vertical arrangement of the brand and nav inside the header.
+  - On mobile it stacks the items vertically.
+  - On desktop it becomes a grid with centered brand and right-aligned nav.
+
+- .brand
+  Purpose:
+  - Styles the logo and title area as a single clickable brand block.
+  - Keeps the logo and text aligned together.
+
+- .logo
+  Purpose:
+  - Wraps the image/logo.
+  - Keeps the logo size fixed so it doesn't collapse when text is removed.
+
+- .logo img
+  Purpose:
+  - Styles the actual image itself.
+  - Gives the image a width/height so it always renders predictably.
+
+- .title
+  Purpose:
+  - Styles the text portion of the brand.
+  - Ensures the wordmark sits cleanly next to the logo.
+
+- .site-nav__list
+  Purpose:
+  - Styles the navigation list.
+  - Removes default list styling and arranges links in a stack or row.
+
+- .site-nav__link
+  Purpose:
+  - Styles navigation links.
+  - Removes the underline and adds padding for clickable spacing.
+
+- .site-nav__link:focus-visible
+  Purpose:
+  - Improves accessibility by showing a visible focus state when keyboard users tab through links.
+
+- main
+  Purpose:
+  - Controls the main content area.
+  - The flex: 1 property allows the main section to fill available space so the footer sits at the bottom.
+
+- .content-section
+  Purpose:
+  - Groups related content blocks together.
+  - Helps create reusable sections like hero rows, feature groups, or content sets.
+
+- .feature-grid
+  Purpose:
+  - Creates a responsive grid for placeholder content boxes.
+  - Uses repeat(auto-fit, minmax(...)) so columns adjust based on available width.
+
+- .feature-card
+  Purpose:
+  - Styles each individual content box/card.
+  - Gives the box a minimum height and centers the content vertically and horizontally.
+
+- .site-footer
+  Purpose:
+  - Styles the footer section.
+  - Sets the background, spacing, and overall layout for the footer area.
+
+- .site-footer__grid
+  Purpose:
+  - Arranges the content inside the footer in a grid.
+  - On mobile it stacks, and on larger screens it becomes columns.
+
+General mental model:
+- .container = page width helper
+- .page-shell = page layout container
+- .site-header = header component
+- .site-nav__list = navigation component
+- .feature-card = card/component styling
+- .site-footer = footer component
