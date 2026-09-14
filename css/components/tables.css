@@ -1,0 +1,61 @@
+/*
+Within each section, properties are generally ordered as follows:
+1. Display and positioning
+2. Box model (width, height, margin, padding)
+3. Typography
+4. Colors and backgrounds
+5. Borders and box-shadow
+6. Transitions and animations
+*/
+
+/* Global Styles */
+body {
+  background: var(--color-bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Table */
+table {
+  height: 40%;
+  left: 10%;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 80%;
+}
+
+thead th {
+  background: var(--color-custom-1);
+  color: var(--color-bg);
+  font-family: 'Lato', sans-serif;
+  font-size: var(--space-4);
+  font-weight: 100;
+  letter-spacing: var(--space-1);
+  text-transform: uppercase;
+}
+
+tr {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 5px;
+}
+
+th, td {
+  font-family: 'Lato', sans-serif;
+  font-size: var(--space-4);
+  font-weight: 400;
+  padding: var(--space-7);
+  text-align: left;
+  width: 33.3333%;
+}
+
+.search {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--space-1);
+  color: var(--color-custom-1);
+  padding: var(--space-7);
+  margin: 50px auto 0 auto;
+  width: 80%;
+}

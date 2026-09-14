@@ -12,23 +12,6 @@ body {
   min-height: 100vh;
   margin: 0;
   background: var(--color-muted);
-  font-family: "Segoe UI", Tahoma, sans-serif;
-}
-
-.page-link {
-  display: block;
-  width: fit-content;
-  margin: var(--space-8) auto 0;
-  text-decoration: none;
-  color: var(--color-accent);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.page-link:hover,
-.page-link:focus-visible {
-  color: #0a5bb5;
 }
 
 .form-shell {

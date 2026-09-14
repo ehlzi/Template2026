@@ -1,0 +1,15 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-muted);
+}
+
+.shell {
+  width: min(90%, 780px);
+  margin: var(--space-8) auto var(--space-8);
+  padding: var(--space-8);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
