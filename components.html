@@ -1,12 +1,44 @@
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components/header.css">
-<link rel="stylesheet" href="css/components/nav.css">
-<link rel="stylesheet" href="css/components/main.css">
-<link rel="stylesheet" href="css/components/hero.css">
-<link rel="stylesheet" href="css/components/button.css">
-<link rel="stylesheet" href="css/components/footer.css">
-<link rel="stylesheet" href="css/components/components.css">
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components | Practice 26</title>
+
+  <meta
+    name="description"
+    content="Practice 26 static site built with a component-based CSS structure."
+  >
+
+  <meta property="og:title" content="Components | Practice 26">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="Components | Practice 26">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/main.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/components.css">
+  <link rel="stylesheet" href="css/components/tables.css">
+  <link rel="stylesheet" href="css/components/forms.css">
+
+</head>
+
+<body>
 
 <div class="page-shell">
 
@@ -16,23 +48,36 @@
 
     <div class="container site-header__inner">
 
-      <a class="brand" href="#" aria-label="Go to homepage">
+      <a class="brand" href="/index.html" aria-label="Go to homepage">
 
           <span class="logo" aria-hidden="true">
-            <img src="icon.svg" alt="">
+            <img src="/icon.svg" alt="">
           </span>
 
-        <span class="title">Practice 26</span>
+        <span class="title">TITLE</span>
 
       </a>
 
       <nav class="site-nav" aria-label="Primary navigation">
 
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Home</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="about.html">About</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="components.html">Components</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contact.html">Contact</a></li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="/index.html" aria-current="page">Home</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="/about.html">About</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="/components.html">Components</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="/contact.html">Contact</a>
+          </li>
+
         </ul>
 
       </nav>
@@ -43,34 +88,104 @@
 
   <main id="main" class="main-content">
 
+    <section class="hero">
+
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+
+          <p class="hero__title">
+            Title Text
+          </p>
+
+          <h1>
+            Heading Text
+          </h1>
+
+          <p>
+            Paragraph Text
+          </p>
+
+        </div>
+
+        <div class="hero__actions">
+
+          <a class="button button-primary" href="#">
+            Button
+          </a>
+
+          <a class="button button-secondary" href="#">
+            Button
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
     <div class="shell">
-      <a class="page-link" href="index.html">
-        <span>RETURN TO INDEX</span>
-      </a>
 
-      <a class="page-link" href="forms.html">
-        <span>FORMS</span>
-      </a>
+      <ul class="component-list">
 
-      <a class="page-link" href="tables.html">
-        <span>TABLES</span>
-      </a>
+        <li>
 
-      <a class="page-link" href="tables.html">
-        <span>HEROS</span>
-      </a>
+          <a class="component-list__link" href="index.html">
+            Return to Index
+          </a>
 
-      <a class="page-link" href="tables.html">
-        <span>FRAMES</span>
-      </a>
+        </li>
 
-      <a class="page-link" href="tables.html">
-        <span>BUTTONS</span>
-      </a>
+        <li>
 
-      <a class="page-link" href="tables.html">
-        <span>STATIC PAGES</span>
-      </a>
+          <a class="component-list__link" href="forms.html">
+            Forms
+          </a>
+
+        </li>
+
+        <li>
+
+          <a class="component-list__link" href="tables.html">
+            Tables
+          </a>
+
+        </li>
+
+        <li>
+
+          <a class="component-list__link" href="#">
+            Heros
+          </a>
+
+        </li>
+
+        <li>
+
+          <a class="component-list__link" href="#">
+            Frames
+          </a>
+
+        </li>
+
+        <li>
+
+          <a class="component-list__link" href="#">
+            Buttons
+          </a>
+
+        </li>
+
+        <li>
+
+          <a class="component-list__link" href="#">
+            Static Pages
+          </a>
+
+        </li>
+
+      </ul>
+
     </div>
 
   </main>

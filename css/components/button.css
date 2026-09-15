@@ -11,7 +11,7 @@
 
 .button-primary {
   background: var(--color-accent);
-  color: #fff
+  color: #fff;
 }
 
 .button-primary:hover {

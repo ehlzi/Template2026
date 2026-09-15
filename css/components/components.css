@@ -6,10 +6,43 @@ body {
 
 .shell {
   width: min(90%, 780px);
-  margin: var(--space-8) auto var(--space-8);
+  margin: var(--space-8) auto;
   padding: var(--space-8);
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.component-list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.component-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--space-10);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.component-list__link:hover,
+.component-list__link:focus-visible {
+  color: var(--color-accent);
+  background: var(--color-muted);
+  border-color: var(--color-accent);
 }
